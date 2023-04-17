@@ -15,5 +15,8 @@ class reverseString:
             left+=1
             right-=1
         print(s)
+    def reverseString2(self, s:List[str])-> None:
+        s.reverse()
 r=reverseString()
 r.reverseString(list(c))
+r.reverseString2(list(c))
