@@ -13,6 +13,8 @@ def solution(my_string):
     return answer
 
 
+
 print(solution("aAb1B2cC34oOp"))
 print(solution("1a2b3c4d123Z"))
 print(solution("asd"))
+print(solution("as1a2b3c4d123Zd"))
