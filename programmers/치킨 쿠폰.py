@@ -4,6 +4,7 @@ def solution(chicken):
         a, b = divmod(chicken, 10)
         answer += a
         chicken = (a + b)
+
     return answer
 
 
