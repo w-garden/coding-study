@@ -1,0 +1,18 @@
+-- 코드를 입력하세요
+SELECT 
+       CAR_ID     
+     , CASE WHEN '2022-10-16' BETWEEN START_DATE AND END_DATE THEN '대여중'
+            ELSE '대여 가능' END AS AVAILABILITY
+    FROM
+        (
+        SELECT
+              CAR_ID
+            , TO_CHAR(START_DATE, 'YYYY-MM-DD') START_DATE
+            , TO_CHAR(END_DATE, 'YYYY-MM-DD') END_DATE
+            , ROW_NUMBER() OVER(PARTITION BY CAR_ID ORDER BY START_DATE DESC) AS rn
+        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY 
+        WHERE '2022-10-16' >= TO_CHAR(START_DATE, 'YYYY-MM-DD') 
+        ) A
+WHERE rn = 1
+
+ORDER BY CAR_ID DESC
