@@ -1,0 +1,19 @@
+--https://school.programmers.co.kr/learn/courses/30/lessons/164673
+
+-- 중고거래 게시판 정보 USED_GOODS_BOARD
+-- 중고거래 게시판 첨부파일 정보 USED_GOODS_REPLY
+SELECT 
+      A.TITLE
+    , A.BOARD_ID	
+    , B.REPLY_ID	
+    , B.WRITER_ID	
+    , B.CONTENTS	
+    , TO_CHAR(B.CREATED_DATE,'YYYY-MM-DD') CREATED_DATE
+FROM
+     USED_GOODS_BOARD A, USED_GOODS_REPLY B
+WHERE
+     A.BOARD_ID=B.BOARD_ID
+ AND TO_CHAR(A.CREATED_DATE,'YYYYMM') ='202210'
+ORDER BY
+     B.CREATED_DATE, A.TITLE 
+;
