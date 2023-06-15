@@ -1,0 +1,7 @@
+-- 어느 의류 쇼핑몰에 가입한 회원 정보를 담은 USER_INFO
+SELECT COUNT(*) USERS
+FROM 
+    USER_INFO 
+WHERE 
+     TO_CHAR(JOINED,'YYYY') = '2021'
+ AND AGE BETWEEN 20 AND 29
