@@ -1,5 +1,6 @@
 -- 어느 한 서점에서 판매중인 도서들의 도서 정보 BOOK
 -- 저자 정보 AUTHOR
+--https://school.programmers.co.kr/learn/courses/30/lessons/144854?language=oracle
 SELECT
       A.BOOK_ID
     , AUTHOR_NAME
