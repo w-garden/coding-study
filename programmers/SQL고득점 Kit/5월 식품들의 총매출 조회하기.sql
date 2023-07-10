@@ -1,0 +1,20 @@
+-- 식품의 정보를 담은 FOOD_PRODUCT
+-- 식품의 주문 정보를 담은 FOOD_ORDER
+-- https://school.programmers.co.kr/learn/courses/30/lessons/131117
+SELECT
+    A.PRODUCT_ID
+  , A.PRODUCT_NAME
+  , SUM(AMOUNT*PRICE) TOTAL_SALES
+FROM
+    FOOD_PRODUCT A    
+  , FOOD_ORDER B
+WHERE
+     A.PRODUCT_ID=B.PRODUCT_ID
+ AND TO_CHAR(B.PRODUCE_DATE,'YYYYMM') ='202205'
+GROUP BY
+     A.PRODUCT_ID
+   , A.PRODUCT_NAME
+ORDER BY 
+    TOTAL_SALES DESC
+  , A.PRODUCT_ID
+    
