@@ -13,14 +13,18 @@ public class Bronze1_1526 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
+        boolean flag = false;
         for (int i = N; i > 0; i--) {
             char[] arr = String.valueOf(N).toCharArray();
             for (char c : arr) {
                 if (c != '4' && c != '7') {
                     N--;
+                    flag = false;
                     break;
                 }
+                flag = true;
             }
+            if (flag)   break;
         }
         System.out.println(N);
     }
