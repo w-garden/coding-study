@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("요솟수 : ");
         int num = sc.nextInt();
         int[] numArr = new int[num];
 
@@ -12,8 +13,10 @@ public class Q2 {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < num; i++) {
+            System.out.print("["+i+"]:");
             numArr[i] = sc.nextInt();
         }
+        System.out.print("찾을 숫자 입력 : ");
         int key = sc.nextInt();
         sb.append("  | ");
         for (int i = 0; i < num; i++) {
