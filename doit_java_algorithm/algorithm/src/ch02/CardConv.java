@@ -7,10 +7,17 @@ public class CardConv {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char[] d = new char[32];
-        System.out.print("숫자 입력 : ");
-        int num = sc.nextInt();
-        System.out.print("변환할 진수 입력 : ");
-        int r = sc.nextInt();
+        int num;
+        int r;
+        do {
+            System.out.print("숫자 입력 : ");
+            num = sc.nextInt();
+        } while (num <= 0);
+
+        do {
+            System.out.print("변환할 진수 입력 : ");
+            r = sc.nextInt();
+        } while (r <= 1);
         cardConv(num, r, d);
 
         System.out.print(d);
@@ -18,7 +25,7 @@ public class CardConv {
 
     }
 
-    static void cardConv(int x, int r, char d[]) {
+    static void cardConv(int x, int r, char[] d) {
         int digits = 0;
         String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

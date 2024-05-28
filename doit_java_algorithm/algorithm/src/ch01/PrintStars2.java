@@ -23,13 +23,11 @@ public class PrintStars2 {
         } while (w <= 0 || w > n);
 
 
-        for (int i = 0; i < n / w; i++) {
+        for (int i = 0; i < n / w; i++)
             System.out.println("*".repeat(w));
-        }
-        int rest = n % w;
-        if (rest != 0) {
-            System.out.println("*".repeat(rest));
-        }
 
+        int rest = n % w;
+        if (rest != 0)
+            System.out.println("*".repeat(rest));
     }
 }

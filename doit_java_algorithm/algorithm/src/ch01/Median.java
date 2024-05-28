@@ -1,7 +1,7 @@
 package ch01;
 
 import java.util.Scanner;
-
+//중앙값 구하기
 public class Median {
     static int med3(int a, int b, int c) {
         if (a >= b)

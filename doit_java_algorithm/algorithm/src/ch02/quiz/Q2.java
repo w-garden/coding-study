@@ -1,7 +1,5 @@
 package ch02.quiz;
 
-import sun.plugin.javascript.navig.Array;
-
 import java.util.Arrays;
 
 public class Q2 {
