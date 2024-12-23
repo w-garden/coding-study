@@ -7,7 +7,6 @@ public class Max3 {
         Scanner stdIn = new Scanner(System.in);
 
         System.out.println("세 수의 최댓값 구하기");
-
         System.out.print("a 의 값을 입력하세요 : ");
         int a = stdIn.nextInt();
         System.out.print("b 의 값을 입력하세요 : ");
