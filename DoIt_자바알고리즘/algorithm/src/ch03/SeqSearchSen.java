@@ -18,22 +18,20 @@ public class SeqSearchSen {
         int key = sc.nextInt();
 
         int idx = seqSearch(x, num, key);
-        if (idx == -1) {
+        if (idx == -1)
             System.out.println("그 값의 요소가 없습니다.");
-        } else {
+        else
             System.out.println("그 값은 x[" + idx + "]에 있습니다.");
-        }
+
     }
 
     private static int seqSearch(int[] x, int num, int key) {
         int i = 0;
         x[num] = key; //보초를 추가
-        while (true) {
-            if (x[i] == key) {
-                break;
-            }
+
+        while (x[i] != key)
             i++;
-        }
+
         return i == num ? -1 : i;
     }
 
