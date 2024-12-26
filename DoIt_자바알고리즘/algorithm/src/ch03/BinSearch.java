@@ -10,7 +10,6 @@ public class BinSearch {
         int[] x = new int[num];
 
         System.out.println("오름차순으로 입력하세요");
-
         System.out.print("x[0]: ");
         x[0] = sc.nextInt();
         for (int i = 1; i < num; i++) {
@@ -25,11 +24,9 @@ public class BinSearch {
         int key = sc.nextInt();
 
         int idx = binSearch(x, num, key);
-        if (idx == -1) {
-            System.out.println("그 값의 요소가 없습니다.");
-        } else {
-            System.out.println("그 값은 x[" + idx + "]에 있습니다.");
-        }
+        if (idx == -1) System.out.println("그 값의 요소가 없습니다.");
+        else System.out.println("그 값은 x[" + idx + "]에 있습니다.");
+
     }
 
     private static int binSearch(int[] x, int num, int key) {
@@ -38,12 +35,9 @@ public class BinSearch {
 
         do {
             int pc = (pl + pr) / 2; //중앙 요소의 인덱스
-            if (x[pc] == key) {
-                return pc;
-            } else if (x[pc] < key) {
-                pl = pc + 1;
-            } else
-                pr = pc - 1;
+            if (x[pc] == key) return pc;
+            else if (x[pc] < key) pl = pc + 1;
+            else pr = pc - 1;
         } while (pl <= pr);
 
         return -1;
