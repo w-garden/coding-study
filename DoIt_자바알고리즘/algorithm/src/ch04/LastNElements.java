@@ -2,6 +2,7 @@ package ch04;
 
 import java.util.Scanner;
 
+//링 버퍼의 활용 : 오래된 데이터를 버리는 용도로 사용할 수 있음
 public class LastNElements {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
