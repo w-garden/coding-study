@@ -1,6 +1,7 @@
 package ch05;
 
 import java.util.Scanner;
+
 //기원전 300년경 유클리드의 원론에 기록된 유클리드 호제법
 public class EuclidGCD {
     static int gcd(int a, int b) {
@@ -19,15 +20,13 @@ public class EuclidGCD {
 
         System.out.println("두 정수의 최대공약수를 구합니다");
 
-        System.out.printf("정수를 입력하세요: ");
+        System.out.print("정수를 입력하세요: ");
         int a = sc.nextInt();
-        System.out.printf("정수를 입력하세요: ");
+        System.out.print("정수를 입력하세요: ");
         int b = sc.nextInt();
 
         System.out.println("최대 공약수는 " + gcd(a, b) + "입니다");
 
-        System.out.println(8 % 22);
-        System.out.println(22 % 8);
     }
 
 }
